@@ -99,3 +99,13 @@ export async function convertPdfToMd(file) {
       return { success: false, error: error.message };
   }
 }
+
+export async function convertTxtToMd(file) {
+  try {
+    const text = await file.text();
+    return { success: true, markdown: text };
+  } catch (error) {
+    console.error('TXT Conversion Failed', error);
+    return { success: false, error: error.message };
+  }
+}

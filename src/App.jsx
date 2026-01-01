@@ -3,7 +3,7 @@ import { useDropzone } from 'react-dropzone';
 import { Upload, FileText, X, Check, AlertCircle, Loader2, Download, Trash2, FileJson } from 'lucide-react';
 import JSZip from 'jszip';
 import { saveAs } from 'file-saver';
-import { convertDocxToMd, convertPdfToMd } from './utils/converter';
+import { convertDocxToMd, convertPdfToMd, convertTxtToMd } from './utils/converter';
 import './App.css';
 
 
@@ -27,7 +27,8 @@ function App() {
     onDrop,
     accept: {
       'application/vnd.openxmlformats-officedocument.wordprocessingml.document': ['.docx'],
-      'application/pdf': ['.pdf']
+      'application/pdf': ['.pdf'],
+      'text/plain': ['.txt']
     },
     multiple: true
   });
@@ -54,6 +55,8 @@ function App() {
         let result;
         if (updatedFiles[i].file.type === 'application/pdf') {
              result = await convertPdfToMd(updatedFiles[i].file);
+        } else if (updatedFiles[i].file.type === 'text/plain') {
+             result = await convertTxtToMd(updatedFiles[i].file);
         } else {
              result = await convertDocxToMd(updatedFiles[i].file);
         }
@@ -116,7 +119,7 @@ function App() {
           <input {...getInputProps()} />
           <Upload className="upload-icon" />
           <p className="dropzone-text">
-            {isDragActive ? "Drop the files here..." : "Drag & drop DOCX or PDF files"}
+            {isDragActive ? "Drop the files here..." : "Drag & drop DOCX, PDF, or TXT files"}
           </p>
           <p className="dropzone-subtext">or click to browse from your computer</p>
         </div>

@@ -11,13 +11,14 @@
 
 ## ✨ Features
 
-- **🚀 Batch Processing**: Drag & drop dozens of files (PDF or DOCX) to convert them simultaneously.
+- **🚀 Batch Processing**: Drag & drop dozens of files (PDF, DOCX, or TXT) to convert them simultaneously.
 - **🔒 Privacy First**: **100% Client-Side**. Your files never leave your browser. No servers, no tracking.
 - **💎 Premium UI**: A modern, glassmorphic interface designed for clarity and ease of use.
 - **📦 ZIP Download**: Download converted files individually or grab them all in a single ZIP archive.
 - **📝 High Fidelity**:
-  - **DOCX**: Preserves semantic structure, tables, formatting, and images (via `mammoth.js` + `turndown`).
+  - **DOCX**: Preserves semantic structure, tables, formatting, and images.
   - **PDF**: Intelligent layout parsing to reconstruct headers and paragraphs.
+  - **TXT**: Direct pass-through conversion.
 
 ## 🛠️ Technology Stack
 
