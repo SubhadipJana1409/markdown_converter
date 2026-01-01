@@ -1,54 +1,84 @@
-# DOCX to Markdown Converter
+# 📄 Doc to Markdown Converter
 
-A high-fidelity, client-side converter that transforms Word documents (`.docx`) into clean Markdown (`.md`). Features a modern, glassmorphic UI and supports batch processing.
+[![Deployment Status](https://img.shields.io/github/deployments/SubhadipJana1409/markdown_converter/github-pages?label=GitHub%20Pages&logo=github)](https://SubhadipJana1409.github.io/markdown_converter/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![React](https://img.shields.io/badge/Made%20with-React-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Bundled%20with-Vite-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
 
-## Features
+> A lightning-fast, client-side tool to batch convert **Word Documents (`.docx`)** and **PDFs** into clean, formatted **Markdown (`.md`)**.
 
-- **Batch Conversion**: Upload and convert multiple files at once.
-- **High Fidelity**: Preserves tables, headings, lists, and formatting (using `mammoth.js` + `turndown` + `gfm`).
-- **Privacy First**: All conversion happens locally in your browser. No files are uploaded to any server.
-- **Bulk Download**: Download individual files or a ZIP archive of all converted documents.
+**[🔴 Live Demo](https://SubhadipJana1409.github.io/markdown_converter/)**
 
-## How to Run
+---
 
-1.  **Install Dependencies** (if you haven't already):
+## ✨ Features
+
+- **🚀 Batch Processing**: Drag & drop dozens of files (PDF or DOCX) to convert them simultaneously.
+- **🔒 Privacy First**: **100% Client-Side**. Your files never leave your browser. No servers, no tracking.
+- **💎 Premium UI**: A modern, glassmorphic interface designed for clarity and ease of use.
+- **📦 ZIP Download**: Download converted files individually or grab them all in a single ZIP archive.
+- **📝 High Fidelity**:
+  - **DOCX**: Preserves semantic structure, tables, formatting, and images (via `mammoth.js` + `turndown`).
+  - **PDF**: Intelligent layout parsing to reconstruct headers and paragraphs.
+
+## 🛠️ Technology Stack
+
+- **Frontend**: [React](https://reactjs.org/) + [Vite](https://vitejs.dev/)
+- **Styling**: Vanilla CSS (Custom Glassmorphism Design System)
+- **DOCX Engine**: [Mammoth.js](https://github.com/mwilliamson/mammoth.js)
+- **PDF Engine**: [PDF.js](https://github.com/mozilla/pdf.js)
+- **Markdown Engine**: [Turndown](https://github.com/mixmark-io/turndown) + [GFM Plugin](https://github.com/domchristie/turndown-plugin-gfm)
+- **Utilities**: [JSZip](https://stuk.github.io/jszip/) (Archiving), [Lucide React](https://lucide.dev/) (Icons)
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Installation
+
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/SubhadipJana1409/markdown_converter.git
+    cd markdown_converter
+    ```
+
+2.  **Install dependencies**
     ```bash
     npm install
     ```
 
-2.  **Start the Development Server**:
+3.  **Start the development server**
     ```bash
     npm run dev
     ```
+    The app will open at `http://localhost:5173`.
 
-3.  **Build for Production**:
-    ```bash
-    npm run build
-    ```
+## 📦 Deployment
 
-## Technologies
+This project is configured for automated deployment to **GitHub Pages**.
 
-- **Vite + React**: Fast, modern frontend framework.
-- **Mammoth.js**: Best-in-class .docx to HTML converter.
-- **Turndown**: HTML to Markdown converter.
-- **Vanilla CSS**: Custom premium styling with Glassmorphism.
-- **JSZip**: Client-side ZIP creation.
+### Manual Deployment
+To deploy changes manually:
+```bash
+npm run deploy
+```
+This script runs the build process and pushes the `dist` folder to the `gh-pages` branch.
 
-## 🚀 How to Deploy (Free)
+## 🤝 Contributing
 
-Since this application runs entirely in the browser (client-side), you can host it for **free** forever on any static site provider. Here are the two easiest ways:
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-### Option 1: Vercel (Recommended)
-1.  Create an account at [vercel.com](https://vercel.com).
-2.  Install the Vercel CLI (optional) or just use the web dashboard.
-3.  **Drag & Drop**: Run `npm run build` locally. This creates a `dist` folder. Drag this folder into the Vercel dashboard to deploy.
-4.  **Git (Automatic)**: Push this code to GitHub/GitLab. Connect your repository in Vercel. It will detect Vite and deploy automatically.
+1.  Fork the project
+2.  Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request
 
-### Option 2: Netlify
-1.  Create an account at [netlify.com](https://netlify.com).
-2.  **Drag & Drop**: Run `npm run build` locally. Drag the `dist` folder onto the "Sites" page in Netlify.
-3.  **Git**: Connect your repository. Netlify will auto-detect the build command (`npm run build`) and publish directory (`dist`).
+## 📄 License
 
-### Option 3: GitHub Pages
-1.  If using GitHub Pages, you may need to set the `base` in `vite.config.js` to your repository name.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+---
+*Created with ❤️ by [SubhadipJana1409](https://github.com/SubhadipJana1409)*
