@@ -1,13 +1,11 @@
 # 📄 Doc to Markdown Converter
 
-[![Deployment Status](https://img.shields.io/github/deployments/SubhadipJana1409/markdown_converter/github-pages?label=GitHub%20Pages&logo=github)](https://SubhadipJana1409.github.io/markdown_converter/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![React](https://img.shields.io/badge/Made%20with-React-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
-[![Vite](https://img.shields.io/badge/Bundled%20with-Vite-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Online-green?style=for-the-badge&logo=netlify)](https://markdownconvert.netlify.app/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 > A lightning-fast, client-side tool to batch convert **Word Documents (`.docx`)** and **PDFs** into clean, formatted **Markdown (`.md`)**.
 
-**[🔴 Live Demo](https://SubhadipJana1409.github.io/markdown_converter/)**
+**[🔴 Visit Live Website](https://markdownconvert.netlify.app/)**
 
 ---
 
